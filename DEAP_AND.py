@@ -2,7 +2,7 @@ import numpy as np
 import random
 from deap import algorithms, base, creator, tools
 #this script uses DEAP library to train a fully-connected neural network to solve the 'OR' problem
-#OR definition: (0,0)->0, (1,0)->0, (0,1)->0, (1,1)->1
+#AND definition: (0,0)->0, (1,0)->0, (0,1)->0, (1,1)->1
 
 #evaluates each set of weights by evaluating neural network
 #assigns fitness to each set of weights

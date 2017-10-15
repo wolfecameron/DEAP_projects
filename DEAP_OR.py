@@ -57,7 +57,12 @@ weightsList = pop[0][0]
 
 #uses derived weights to evaluate OR
 def defineOR(x,y):
-    w = 0 #bias
+    #checks to ensure proper input for function
+    if( (x!=0 and x!=1) or (y!=0 and y!=1)):
+        return "Please input either a 1 or 0 for x and y."
+
+
+    w = 0 #bias, not needed for OR problem
     w1= weightsList[0]
     w2 = weightsList[1]
 
@@ -82,6 +87,7 @@ print(defineOR(0,0))
 print(defineOR(1,0))
 print(defineOR(0,1))
 print(defineOR(1,1))
+print(defineOR(10000,-.99)) #checks to make sure you must input 1 or 0
 
 '''
 should yield:
